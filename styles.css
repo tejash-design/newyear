@@ -1,0 +1,218 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('https://img.freepik.com/free-vector/colorful-fireworks-background-celebration-theme_53876-117461.jpg?t=st=1735227163~exp=1735230763~hmac=1f3d8e242017f39bfef27058376404a3a22fb4453ac6df23f6c43393a85edd6f&w=1060') center center no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mobile Background */
+@media only screen and (max-width: 768px) {
+    body {
+        background: url('https://img.freepik.com/free-photo/vertical-shot-beautiful-colorful-fireworks-dark-night-sky_181624-28156.jpg?ga=GA1.1.1142251636.1721028826&semt=ais_hybrid') center center no-repeat;
+        background-size: cover;
+    }
+}
+
+/* Desktop Background */
+@media only screen and (min-width: 769px) {
+    body {
+        background: url('https://img.freepik.com/free-vector/colorful-fireworks-display-night_1308-170918.jpg?t=st=1735232217~exp=1735235817~hmac=4048610b93a177d614f04dee34b8779ca85e6bd8cae4811179ba466d531407bc&w=1060') center center no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+/* Container */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    text-align: center;
+}
+
+/* Header */
+.header {
+    margin: 50px auto;
+    animation: fadeInUp 2s ease-out;
+}
+
+.main-heading {
+    font-size: 3rem;
+    text-shadow: 0px 6px 12px rgba(255, 255, 255, 0.8);
+    animation: fadeInText 1s ease-out;
+}
+
+.subheading {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #81BFDA;
+    opacity: 0.7;
+    animation: fadeInText 1.5s ease-out;
+}
+
+/* Countdown Section */
+#countdown-section {
+    margin: 40px auto;
+    animation: fadeInUp 2s ease-out, scaleUp 2s ease-out;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.count-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    min-width: 80px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+    animation: bounceIn 1s ease-out;
+}
+
+.count-item:hover {
+    transform: scale(1.1);
+}
+
+.count-item span {
+    font-size: 2.5rem;
+    display: block;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.count-item label {
+    font-size: 1rem;
+    color: #cbd5e1;
+}
+
+/* Celebration Section */
+#celebration-section {
+    margin-top: 40px;
+    opacity: 0;
+    animation: fadeInUp 3s ease-out forwards;
+}
+
+.celebration-heading {
+    font-size: 4rem;
+    text-shadow: 0px 6px 12px rgba(255, 215, 0, 0.8);
+    animation: celebrationText 2s ease-out;
+}
+
+.celebration-year {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    color: #f3f4f6;
+    animation: pulse 2s infinite, fadeInText 2s ease-out;
+}
+
+/* Fireworks */
+.fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: url('https://media1.tenor.com/m/iD_FE7stZvUAAAAC/pyroworks-free-firework-game.gif') center center no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+    animation: fireworksAnimation 2s ease-out;
+    z-index: -1; /* Make sure it's behind other elements */
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+.footer {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes celebrationText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Fireworks Animation */
+@keyframes fireworksAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
