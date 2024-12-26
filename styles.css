@@ -141,6 +141,28 @@ body {
     color: #fff;
 }
 
+.creator-name {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: #fff;
+    opacity: 0.8;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    font-style: italic;
+}
+
+.creator-name a {
+    color: #38bdf8; 
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: color 0.3s ease-in-out; 
+}
+
+.creator-name a:hover {
+    color: #81bfda; 
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
